@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Professional Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <img src="Adil.jpg" alt="Professional headshot of a software developer wearing business casual attire" class="profile-img" onerror="this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b3528549-f17e-4e53-b285-d56f7cfaee19.png'">
+            <h1>Aadil Wani</h1>
+            <div class="title">Front-End Developer</div>
+        </div>
+    </header>
+    
+    <main class="container">
+        <section class="about">
+            <h2>About Me</h2>
+            <p>Front-end developer specializing in HTML, CSS and JavaScript frameworks. Passionate about creating responsive, accessible user interfaces with clean code and pixel-perfect designs. Committed to continuous learning in modern front-end technologies.</p>
+        </section>
+        
+        <section class="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-slider">
+                <button class="slider-nav prev" onclick="scrollSkills(-200)">❮</button>
+                <button class="slider-nav next" onclick="scrollSkills(200)">❯</button>
+                <div class="skills-container">
+                <div class="skill">
+                    <img src="https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png">
+                    <span>HTML5</span>
+                </div>
+                <div class="skill">
+                    <img src="https://images.seeklogo.com/logo-png/18/1/css3-logo-png_seeklogo-186678.png">
+                    <span>CSS3</span>
+                </div>
+                <div class="skill">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png">
+                    <span>JavaScript</span>
+                </div>
+                <div class="skill">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlGmKtrnxElpqw3AExKXPWWBulcwjlvDJa1Q&s">
+                    <span>React</span>
+                </div>
+                <div class="skill">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDaL14nUjG4Fip2H7pAZAVUnB2Fx2WI7Ly_w&s">
+                    <span>BootStrap</span>
+                </div>
+                <div class="skill">
+                    <img src="https://logos-world.net/wp-content/uploads/2020/11/GitHub-Logo.png">
+                    <span>GitHub</span>
+                </div>
+            </div>
+        </section>
+        
+        <section class="learning-goals">
+            <h2>Technical Focus</h2>
+            <p>Specializing in modern front-end technologies including:</p>
+            <ul>
+                <li>Responsive UI development with HTML5, CSS3 and JavaScript</li>
+                <li>Component-based architecture using React.js</li>
+                <li>CSS preprocessors (SASS/LESS) and frameworks (Bootstrap/Tailwind)</li>
+                <li>Front-end build tools and workflow automation</li>
+                <li>Performance optimization and accessibility standards</li>
+            </ul>
+        </section>
+        
+        <section class="education">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>Bachelor of Science in Information Technology</h3>
+                <div class="meta">
+                    <span>Govt Degree College Ganderbal</span>
+                    <span>2022 - 2025</span>
+                </div>
+            </div>
+        </section>
+        
+        <section class="contact">
+            <h2>Contact Me</h2>
+            <ul class="contact-list">
+                <li>
+                    <a href="mailto:waniaadil211@gmail.com">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png">
+                        Waniaadil211@gmail.com
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/aadil-wani-65a9a2371/">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/1024px-LinkedIn_icon.svg.png">
+                        linkedin.com/in/aadil-wani
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/AadilWani2">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoh5SY3J2BsoecJ8TsxtGX-34_b5HCIG6PIA&s">
+                        github.com/AadilWani2
+                    </a>
+                </li>
+                <li>
+                    <a href="tel:+916005383588">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/94fb3ef3-dd49-4091-bd8a-9c6e2e6aab04.png" alt="Phone icon" onerror="this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5ee85bca-40b1-41dd-ab54-4f552f6b2187.png'">
+                        (+91)6005383588
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            © 2022 Aadil Wani. All rights reserved.
+        </div>
+    </footer>
+    <script>
+             function scrollSkills(offset) {
+            const container = document.querySelector('.skills-container');
+            container.scrollBy({
+                left: offset,
+                behavior: 'smooth'
+            });
+            
+            // Disable button temporarily during scroll
+            document.querySelectorAll('.slider-nav').forEach(btn => {
+                btn.disabled = true;
+                setTimeout(() => btn.disabled = false, 500);
+            });
+        }
+    </script>
+</body>
+</html>
